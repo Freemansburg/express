@@ -1,0 +1,174 @@
+<!-- views/our-services.html and views/contact-us.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+    nav {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+  }
+  
+  nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+    border-radius: 20px;
+  }
+
+  body{
+    height: 99vh;
+    overflow-y: hidden;
+    margin: 40px;
+    position: center;
+    background: #111;
+    color: white;
+
+    
+}
+.formBox {
+    padding: 15px;
+    text-align: center;
+    min-height: 50vh;
+    min-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f885;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+
+}
+
+h2 {
+    margin-bottom: -10px;
+}
+
+p {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+form {
+                padding: 10px;
+            }
+
+            form>div {
+                padding: 10px;
+                position: relative;
+                font-size: 1em;
+            }
+
+            form>div i {
+                position: absolute;
+                top: 22px;
+                margin-left: 10px;
+                opacity: 0.6;
+            }
+
+            form>div input {
+                height: 2em;
+                width: 70vw;
+                padding-left: 40px;
+                font-size: 1em;
+                border-radius: 20px;
+                outline: none;
+                border: 1px solid #b5adad;
+                background-color: #f1f1f1;
+            }
+
+            div>input:focus {
+                border: 1px solid #6f6a6a;
+
+            }
+
+            form>div:hover>i {
+
+                opacity: 1;
+                transition: opacity 1s;
+            }
+
+            textarea {
+                border: none;
+                width: 70vw;
+                border-radius: 20px;
+                padding: 10px;
+                outline: none;
+                font-size: 1em;
+            }
+
+            button {
+                width: 50%;
+                height: 5vh;
+                color: #ffffff;
+                background: chocolate;
+                outline: none;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 0.8em;
+            }
+
+            @media screen and (min-width:900px) {
+                form>div input {
+                    width: 50vw;
+                }
+
+                textarea {
+                    width: 50vw;
+                }
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/our-services">Our Services</a>
+    <a href="/contact-us">Contact Us</a>
+  </nav>
+  <div class="formBox">
+    <h2>Contact Us</h2>
+    <p>You will hear from us at the earliest!</p>
+    <form action="#">
+        <div class="nameInp">
+            <i class="fa fa-user icon"></i>
+            <input type="text" placeholder="Full Name" name="name" id="name">
+        </div>
+        <div class="mailInp">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="mail" id="mail" placeholder="Email">
+        </div>
+        <div class="phoneInp">
+            <i class="fa-solid fa-phone"></i>
+            <input type="number" name="phone" id="phone" placeholder="Phone" min="100000" max="9999999999">
+        </div>
+        <div class="queryInp">
+            <textarea name="query" id="query" cols="30" rows="5"
+                placeholder="Any comment or your query"></textarea>
+        </div>
+        <div class="submitBtn">
+            <button id="btn" onclick="notif()">Send</button>
+        </div>
+    </form>
+    <p class="extra">You can also contact us at 08156863122</p>
+</div>
+
+</body>
+</html>
